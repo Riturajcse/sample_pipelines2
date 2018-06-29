@@ -25,7 +25,7 @@ jobs:
     type: manifest
     steps:
       - IN: box-nginx-2
-        branch: ${branch}
+        branch: master
       - IN: sample_nodejs_runCI
     on_success:
       NOTIFY: slack_notification
