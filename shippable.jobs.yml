@@ -38,7 +38,7 @@ jobs:
           runtime:
             options:
               env:
-                - image_res: "temp_img"
+                - image_res: "temp_img_master"
           script:
             - *login_image_registry
             - echo $IMAGE_NAME
