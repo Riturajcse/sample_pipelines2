@@ -19,7 +19,7 @@ login_image_registry_temp: &login_image_registry
       docker login -u $DH_USR_NAME -p $DH_PASS
 
 resources:
-  - name: temp_img_r
+  - name: temp_img
     type: image
     integration: ${integration}
     versionTemplate:
