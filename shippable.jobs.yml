@@ -19,7 +19,7 @@ login_image_registry_temp: &login_image_registry
       docker login -u $DH_USR_NAME -p $DH_PASS
 
 resources:
-  - name: temp_img
+  - name: temp_img_r
     type: image
     integration: ${integration}
     versionTemplate:
@@ -28,17 +28,17 @@ resources:
       region: ${region}
 
 jobs:
-  - name: test_vars
+  - name: test_vars_r
     type: runSh
     steps:
-      - IN: temp_img
+      - IN: temp_img_r
         branch: ${branch}
       - TASK:
           name: test_img
           runtime:
             options:
               env:
-                - image_res: "temp_img_rc"
+                - image_res: "temp_img_r"
           script:
             - *login_image_registry
             - echo $IMAGE_NAME
