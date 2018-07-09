@@ -31,7 +31,7 @@ jobs:
   - name: test_vars_r
     type: runSh
     steps:
-      - IN: temp_img_r
+      - IN: temp_img
         branch: rc
       - TASK:
           name: test_img
