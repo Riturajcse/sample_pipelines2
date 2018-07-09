@@ -28,7 +28,7 @@ resources:
       region: ${region}
 
 jobs:
-  - name: test_vars_r
+  - name: test_vars
     type: runSh
     steps:
       - IN: temp_img
