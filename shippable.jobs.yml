@@ -32,7 +32,7 @@ jobs:
     type: runSh
     steps:
       - IN: temp_img
-        branch: ${branch}
+        branch: rc
       - TASK:
           name: test_img
           runtime:
