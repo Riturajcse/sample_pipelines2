@@ -26,14 +26,7 @@ resources:
       sourceName: ${sourceName}
       versionName: "latest"
       region: ${region}
-      
-  - name: temp_img
-    type: image
-    integration: ${integration}
-    versionTemplate:
-      sourceName: ${sourceName}
-      versionName: "latest"
-      region: ${region}
+     
 
 jobs:
   - name: test_vars
