@@ -1,8 +1,10 @@
 vars:
   master:
     sourceName: avinci/node_app_master
+    branch: master
   rc:
     sourceName: avinci/node_app_feat
+    branch: rc
   region: us-west-2
   sourceName: avinci/node_app
   integration: avinci_dh
@@ -24,20 +26,19 @@ resources:
       sourceName: ${sourceName}
       versionName: "latest"
       region: ${region}
-     
 
 jobs:
   - name: test_vars
     type: runSh
     steps:
       - IN: temp_img
-        branch: master
+        branch: rc
       - TASK:
           name: test_img
           runtime:
             options:
               env:
-                - image_res: "temp_img_r"
+                - image_res: "temp_img"
           script:
             - *login_image_registry
             - echo $IMAGE_NAME
