@@ -52,6 +52,7 @@ jobs:
   - name: state_jobs-1
     type: runSh
     steps:
+      - IN: state_jobs
       - TASK:
           script:
             - shipctl copy_resource_file_from_state job_1 myFile.txt .
