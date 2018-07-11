@@ -53,6 +53,7 @@ jobs:
     type: runSh
     steps:
       - IN: state_jobs
+        branch: ${branch}
       - TASK:
           script:
             - shipctl copy_resource_file_from_state state_jobs hhy.txt .
