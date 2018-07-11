@@ -40,3 +40,19 @@ jobs:
           script:
             - *login_image_registry
             - echo $IMAGE_NAME
+            
+  - name: state_jobs
+    type: runSh
+    steps:
+      - TASK:
+          script:
+            - echo "hello world" > hhy.txt
+            - shipctl copy_file_to_state hhy.txt
+
+  - name: state_jobs-1
+    type: runSh
+    steps:
+      - TASK:
+          script:
+            - shipctl copy_resource_file_from_state job_1 myFile.txt .
+            - cat hhy.txt
