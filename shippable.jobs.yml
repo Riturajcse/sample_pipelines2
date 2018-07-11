@@ -39,7 +39,7 @@ jobs:
                 #- image_res: "temp_img"
           #script:
             #- *login_image_registry
-            #- echo $IMAGE_NAME
+            #- echo $IMAGE_NAMEd
             
   - name: state_jobs
     type: runSh
