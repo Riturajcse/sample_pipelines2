@@ -55,5 +55,5 @@ jobs:
       - IN: state_jobs
       - TASK:
           script:
-            - shipctl copy_resource_file_from_state job_1 myFile.txt .
+            - shipctl copy_resource_file_from_state state_jobs hhy.txt .
             - cat hhy.txt
